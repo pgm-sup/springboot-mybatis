@@ -4,7 +4,7 @@ server:
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://localhost:3306/Haima?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+        url: jdbc:mysql://localhost:3306/test?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
         username: root
         password: haimaroot
         # 使用druid数据源
