@@ -1,6 +1,7 @@
 package com.wyc;
 
 import com.wyc.entity.User;
+import com.wyc.mapper.TableMapperCustom;
 import com.wyc.service.TableService;
 import com.wyc.service.UserService;
 import org.junit.Test;
@@ -21,10 +22,12 @@ public class SpringbootMybatisApplicationTests {
 	@Autowired
 	private TableService tableService;
 
+	@Autowired
+	private TableMapperCustom tableMapperCustom;
+
 	@Test
 	public void contextLoads() {
-		List tables = tableService.queryTables();
-		System.out.println(tables);
+//		tableMapperCustom.insertData("CompanyName, NumberType, PlateNum, IllegalDate, IllegalPlace, IllegalDetail, Money, Status, lng, lat", "数空,dd, ss, ff, fg, gfh, sds, sdsa, fgg, lkl", "muck_vehicle_illegal");
 	}
 
 }

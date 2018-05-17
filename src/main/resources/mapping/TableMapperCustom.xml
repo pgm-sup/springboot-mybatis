@@ -54,4 +54,20 @@
     <select id="queryTables" resultType="TableInfo">
     SELECT table_name, table_type, CREATE_TIME,TABLE_COMMENT FROM information_schema.tables WHERE table_schema = 'test' ORDER BY table_name DESC;
   </select>
+
+    <select id="queryTableInfo" resultType="TableInfoDetail" parameterType="java.lang.String">
+        select t.column_comment,t.column_name,t.data_type,t.character_maximum_length,t.column_key from information_schema.columns t where TABLE_SCHEMA='test' and TABLE_NAME= #{table}
+    </select>
+
+    <insert id="insertData" parameterType="java.util.Map">
+        insert into ${tableName} (
+        <foreach collection="params" index="key" item="value" separator=",">
+            ${key}
+        </foreach>
+        ) VALUES (
+        <foreach collection="params" index="key" item="value" separator=",">
+            #{value}
+        </foreach>
+        )
+    </insert>
 </mapper>
