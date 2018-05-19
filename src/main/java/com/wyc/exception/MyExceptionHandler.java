@@ -25,7 +25,7 @@ public class MyExceptionHandler {
     // ModelAndView mav = new ModelAndView();
     // mav.addObject("exception", e);
     // mav.addObject("url", reqest.getRequestURL());
-    // mav.setViewName(IMOOC_ERROR_VIEW);
+    // mav.setViewName(ERROR_VIEW);
     // return mav;
     // }
 

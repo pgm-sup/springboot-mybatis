@@ -33,6 +33,8 @@ spring:
         max-idle: 10
         min-idle: 2
       timeout: 0
+    mvc:
+      static-path-pattern: /static/**
 mybatis:
   mapper-locations: classpath:mapping/*.xml
   type-aliases-package: com.wyc.entity
