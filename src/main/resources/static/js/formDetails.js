@@ -59,7 +59,7 @@
     }
 	function updataForm(){
 		var elm=$('.main').children();
-		if(elm.length==1){
+		if(elm.length===1){
 			alert("请添加信息");
 		}else{
 			var Datas=[];
@@ -67,10 +67,10 @@
 				var obj={};
 				var zid=0;
 				for(var j=0;j<$(elm[i]).children().length-1;j++){
-					if($($(elm[i]).children()[j]).val()==''){
+					if($($(elm[i]).children()[j]).val()===''){
 						zid++;
 					}
-					if(zid==$(elm[i]).children().length-1){
+					if(zid===$(elm[i]).children().length-1){
 						alert('请至少填一条表单');
 						return;
 					}

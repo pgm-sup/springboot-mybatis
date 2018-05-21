@@ -12,7 +12,7 @@ body,html{
 		
 		.button{
 			border-radius: 100px;
-			margin-right:0px;
+			margin-right:0;
 			position: absolute;
 		}
 		div.text{
@@ -24,7 +24,7 @@ body,html{
 		.form-inline input{
 			max-width: 120px;
 			padding: 0;
-			border-radius: 0px;
+			border-radius: 0;
 		}
 		input[value='提交']{
 			position:  fixed;
